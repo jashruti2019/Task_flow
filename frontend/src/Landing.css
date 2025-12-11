@@ -1,0 +1,159 @@
+/* Landing.css - purple/black premium theme */
+
+/* PAGE */
+.landing-dark, .landing {
+  min-height: 100vh;
+  padding: 64px 20px 120px;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #0b0d12 0%, #0f1220 60%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* background glows */
+.glowA, .glow, .glow-2, .glowB { position: absolute; border-radius: 50%; z-index: -1; }
+
+.glowA, .glow {
+  width: 560px; height: 560px;
+  left: -140px; top: -120px;
+  background: radial-gradient(closest-side, rgba(123,97,255,0.46), rgba(75,107,251,0.08));
+  filter: blur(120px); opacity: .5;
+}
+
+.glowB, .glow-2 {
+  width: 520px; height: 520px;
+  right: -120px; bottom: -140px;
+  background: radial-gradient(closest-side, rgba(75,107,251,0.36), rgba(158,132,255,0.04));
+  filter: blur(140px); opacity: .45;
+}
+
+/* brand */
+.brand-title {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  color: #bfc8ff;
+  letter-spacing: 0.6px;
+  text-shadow: 0 6px 30px rgba(91,71,255,0.12);
+}
+
+/* hero */
+.hero-title {
+  margin-top: 10px;
+  font-size: 56px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.8px;
+}
+
+.brand-name.big-brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: #c8d3ff;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.hero-sub {
+  max-width: 760px;
+  margin: 12px auto 22px;
+  color: #bfc6ff;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta-row { margin-top: 18px; display: flex; gap: 14px; justify-content: center; align-items: center; }
+.cta-main {
+  background: linear-gradient(135deg, #7B61FF 0%, #5A3FFF 100%);
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(91,71,255,0.28);
+}
+.cta-main:hover { transform: translateY(-4px); transition: .22s; }
+.cta-ghost {
+  background: transparent;
+  color: #cfd6ff;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* mockups */
+.mockup-section { margin-top: 56px; display: flex; justify-content: center; }
+.mock-wrap { position: relative; width: min(920px, 96%); height: auto; }
+
+.mock-main {
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 30px 80px rgba(8,8,16,0.6);
+}
+
+.mock-card {
+  position: absolute;
+  width: 260px;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 20px 60px rgba(8,8,16,0.6);
+}
+
+.mock-left { left: -60px; top: 120px; transform: rotate(-6deg); }
+.mock-right { right: -60px; top: 80px; transform: rotate(6deg); }
+
+/* mock images */
+.mock-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* features strip */
+.features-strip {
+  margin: 64px auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 980px;
+  flex-wrap: wrap;
+}
+.feature {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 18px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 14px 44px rgba(6,6,10,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  text-align: left;
+}
+.feature h4 { margin: 6px 0 4px; color: #e8eaff; font-size: 16px; }
+.feature p { margin: 0; color: #bfc6ff; font-size: 13px; }
+.feature-icon { font-size: 20px; }
+
+/* responsiveness */
+@media (max-width: 980px) {
+  .hero-title { font-size: 44px; }
+  .mock-main { height: 300px; }
+  .mock-left, .mock-right { display: none; }
+  .feature { width: 44%; }
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 30px; }
+  .brand-title { font-size: 22px; }
+  .features-strip { gap: 12px; }
+  .feature { width: 100%; }
+  .cta-row { flex-direction: column; }
+}
