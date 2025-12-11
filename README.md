@@ -50,15 +50,15 @@ Folder Structure
 
 project/
 │
-├── backend/
-│   ├── server.js
-│   ├── db.js
-│   ├── routes/
-│   │   └── tasks.js
-│   ├── controllers/
-│   │   └── tasksController.js
-│   ├── package.json
-│   └── .env
+├──  backend/
+│     ├── server.js
+│     ├── db.js
+│     ├── routes/
+│     │   └── tasks.js
+│     ├── controllers/
+│     │   └── tasksController.js
+│     ├── package.json
+│     └── .env
 │
 └── frontend/
     ├── src/
